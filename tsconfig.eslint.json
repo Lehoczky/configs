@@ -3,5 +3,5 @@
     "allowJs": true,
     "outDir": "dist"
   },
-  "include": ["playground/**/*"]
+  "include": ["playground/**/*", "packages/**/*"]
 }

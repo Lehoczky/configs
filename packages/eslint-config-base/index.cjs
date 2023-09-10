@@ -108,17 +108,6 @@ module.exports = {
     // Simple import sort
     "simple-import-sort/imports": "warn",
   },
-  overrides: [
-    {
-      files: ["*.yaml", "*.yml"],
-      parser: "yaml-eslint-parser",
-      extends: ["plugin:yml/standard", "plugin:yml/prettier"],
-      rules: {
-        "yml/no-empty-mapping-value": "off",
-        "yml/plain-scalar": "warn",
-      },
-    },
-  ],
   ignorePatterns: [
     "*.min.*",
     "CHANGELOG.md",

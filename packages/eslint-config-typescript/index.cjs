@@ -1,4 +1,5 @@
 const { getTsConfig } = require("./getTsConfig.cjs")
+const typeCheckingConfig = require("./type-checking.cjs")
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
@@ -85,10 +86,10 @@ module.exports = {
   overrides: [
     {
       files: ["*.ts", "*.mts", "*.cts", "*.tsx"],
-      extends: ["./type-checking.cjs"],
       parserOptions: {
         project: getTsConfig(),
       },
+      ...typeCheckingConfig,
     },
     {
       files: ["*.d.ts"],

@@ -1,6 +1,7 @@
 const {
   getTsConfig,
 } = require("@lehoczky/eslint-config-typescript/getTsConfig.cjs")
+const typescriptConfig = require("@lehoczky/eslint-config-typescript")
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
@@ -19,6 +20,7 @@ module.exports = {
     },
   },
   overrides: [
+    ...typescriptConfig.overrides,
     {
       files: ["*.vue"],
       extends: ["plugin:vue/vue3-recommended", "prettier"],

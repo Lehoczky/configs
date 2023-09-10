@@ -3,8 +3,9 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "eslint:check": "eslint . --ext .js,.ts,.vue --max-warnings=0",
     "format:fix": "prettier --write .",
-    "lint": "npm run format:fix"
+    "lint": "npm run format:fix && npm run eslint:check"
   },
   "devDependencies": {
     "@lehoczky/eslint-config-base": "workspace:*",

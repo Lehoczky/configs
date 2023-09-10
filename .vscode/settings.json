@@ -3,6 +3,5 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.validate": ["javascript", "javascriptreact", "yaml"],
   "cSpell.words": ["sonarjs"]
 }
