@@ -26,5 +26,8 @@
     "name": "Zoltan Lehoczky",
     "email": "ifjlehoczkyzoltan@gmail.com",
     "url": "https://github.com/Lehoczky"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
