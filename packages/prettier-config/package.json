@@ -1,0 +1,15 @@
+{
+  "name": "@lehoczky/prettier-config",
+  "version": "1.0.0",
+  "main": "index.cjs",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  },
+  "author": {
+    "name": "Zoltan Lehoczky",
+    "email": "ifjlehoczkyzoltan@gmail.com",
+    "url": "https://github.com/Lehoczky"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "configs-monorepo",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "format:fix": "prettier --write .",
+    "lint": "npm run format:fix"
+  },
+  "devDependencies": {
+    "@lehoczky/eslint-config-base": "workspace:*",
+    "@lehoczky/eslint-config-typescript": "workspace:*",
+    "@lehoczky/eslint-config-vue": "workspace:*",
+    "eslint": "^8.47.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.1.6"
+  }
+}

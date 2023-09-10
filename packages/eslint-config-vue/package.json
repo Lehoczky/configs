@@ -1,0 +1,30 @@
+{
+  "name": "@lehoczky/eslint-config-vue",
+  "description": "ESLint Config for Vue3 with TypeScript",
+  "version": "0.0.20",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.cjs",
+    "./package.json": "./package.json"
+  },
+  "main": "index.cjs",
+  "dependencies": {
+    "@lehoczky/eslint-config-typescript": "workspace:*",
+    "eslint-plugin-vue": "^9.17.0",
+    "eslint-config-prettier": "^8.10.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.38.0",
+    "typescript": ">=5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "typescript": "^5.1.6"
+  },
+  "author": {
+    "name": "Zoltan Lehoczky",
+    "email": "ifjlehoczkyzoltan@gmail.com",
+    "url": "https://github.com/Lehoczky"
+  }
+}
