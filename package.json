@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "eslint:fix": "eslint . --ext .js,.cjs,.ts,.cts,.vue --max-warnings=0 --fix",
-    "format:fix": "prettier --write .",
+    "format:fix": "prettier . --write --ignore-unknown",
     "markdownlint:fix": "markdownlint-cli2 \"**/*.md\" \"!**/node_modules\"",
     "lint": "npm run format:fix && npm run eslint:fix && npm run markdownlint:fix"
   },
