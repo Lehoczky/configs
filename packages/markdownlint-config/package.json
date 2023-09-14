@@ -1,0 +1,19 @@
+{
+  "name": "@lehoczky/markdownlint-config",
+  "version": "0.0.1",
+  "main": "index.cjs",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "@lehoczky/markdownlint-define-config": "^0.1.2"
+  },
+  "author": {
+    "name": "Zoltan Lehoczky",
+    "email": "ifjlehoczkyzoltan@gmail.com",
+    "url": "https://github.com/Lehoczky"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
