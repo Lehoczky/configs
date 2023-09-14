@@ -1,7 +1,7 @@
-const fs = require("fs")
-const path = require("path")
+import fs from "node:fs"
+import path from "node:path"
 
-function getTsConfig() {
+export function getTsConfig() {
   if (fs.existsSync("tsconfig.eslint.json")) {
     return path.resolve("tsconfig.eslint.json")
   }
@@ -10,5 +10,3 @@ function getTsConfig() {
   }
   return undefined
 }
-
-exports.getTsConfig = getTsConfig

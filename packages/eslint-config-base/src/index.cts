@@ -1,7 +1,8 @@
-require("@rushstack/eslint-patch/modern-module-resolution")
+import "@rushstack/eslint-patch/modern-module-resolution"
 
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
+import type { Linter } from "eslint"
+
+export = {
   plugins: [
     "only-warn",
     "unicorn",
@@ -124,4 +125,4 @@ module.exports = {
     "!.github",
     "!.vscode",
   ],
-}
+} as Linter.Config

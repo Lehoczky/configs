@@ -1,1 +1,1 @@
-module.exports = require("./packages/markdownlint-config")
+module.exports = require("@lehoczky/markdownlint-config")

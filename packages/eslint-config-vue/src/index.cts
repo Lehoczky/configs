@@ -1,10 +1,8 @@
-const {
-  getTsConfig,
-} = require("@lehoczky/eslint-config-typescript/getTsConfig.cjs")
-const typescriptConfig = require("@lehoczky/eslint-config-typescript")
+import typescriptConfig from "@lehoczky/eslint-config-typescript"
+import { getTsConfig } from "@lehoczky/eslint-config-typescript/getTsConfig.cjs"
+import type { Linter } from "eslint"
 
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
+export = {
   extends: ["@lehoczky/eslint-config-typescript"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -75,4 +73,4 @@ module.exports = {
       },
     },
   ],
-}
+} as Linter.Config

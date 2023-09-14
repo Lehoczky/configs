@@ -1,5 +1,6 @@
-/** @type {import("@lehoczky/markdownlint-define-config").Config} */
-module.exports = {
+import type { Config } from "@lehoczky/markdownlint-define-config"
+
+export = {
   "blanks-around-fences": false,
   "blanks-around-headings": false,
   "blanks-around-lists": false,
@@ -23,4 +24,4 @@ module.exports = {
   "strong-style": false,
   "ul-indent": false,
   "no-inline-html": false,
-}
+} as Config

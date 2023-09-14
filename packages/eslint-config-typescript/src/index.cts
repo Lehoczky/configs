@@ -1,8 +1,9 @@
-const { getTsConfig } = require("./getTsConfig.cjs")
-const typeCheckingConfig = require("./type-checking.cjs")
+import type { Linter } from "eslint"
 
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
+import { getTsConfig } from "./getTsConfig.cjs"
+import typeCheckingConfig from "./type-checking.cjs"
+
+export = {
   env: {
     es6: true,
     browser: true,
@@ -104,4 +105,4 @@ module.exports = {
       },
     },
   ],
-}
+} as Linter.Config

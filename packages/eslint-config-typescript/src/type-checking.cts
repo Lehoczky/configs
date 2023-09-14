@@ -1,5 +1,6 @@
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
+import type { Linter } from "eslint"
+
+export = {
   rules: {
     "@typescript-eslint/no-confusing-void-expression": [
       "warn",
@@ -52,4 +53,4 @@ module.exports = {
     "unicorn/prefer-includes": "off",
     "@typescript-eslint/prefer-includes": "warn",
   },
-}
+} as Linter.Config

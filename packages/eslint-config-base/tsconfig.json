@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "outDir": "dist",
+    "declaration": true,
+    "noEmitOnError": true
+  },
+  "include": ["src/**/*"]
+}
