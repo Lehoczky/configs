@@ -16,6 +16,19 @@ pnpm add -D prettier @lehoczky/prettier-config
 "@lehoczky/prettier-config"
 ```
 
+or when extending an existing config:
+
+`prettierrc.mjs`:
+
+```js
+import config from "@lehoczky/prettier-config"
+
+/** @type {import("prettier").Options} */
+export default {
+  ...config,
+}
+```
+
 Example command:
 
 ```json
