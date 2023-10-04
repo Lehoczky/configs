@@ -28,3 +28,19 @@ Example command:
   }
 }
 ```
+
+## 🛠 TSConfig
+
+If your `tsconfig.json` file does not [include](https://www.typescriptlang.org/tsconfig#include) every TypeScript file in the project, you can create a new `tsconfig.eslint.json` file and include every file in that.
+
+This config will automatically use `tsconfig.eslint.json` file if it finds one in the root of your repository:
+
+```json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true
+  },
+  "include": ["src/**/*", "./*.ts"]
+}
+```
