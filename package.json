@@ -1,7 +1,6 @@
 {
   "name": "configs-monorepo",
   "private": true,
-  "license": "MIT",
   "scripts": {
     "eslint:fix": "eslint . --ext .js,.cjs,.ts,.cts,.vue --max-warnings=0 --fix",
     "format:fix": "prettier . --write --ignore-unknown",

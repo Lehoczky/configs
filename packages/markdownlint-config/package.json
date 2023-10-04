@@ -26,6 +26,11 @@
     "email": "ifjlehoczkyzoltan@gmail.com",
     "url": "https://github.com/Lehoczky"
   },
+  "homepage": "https://github.com/Lehoczky/configs/tree/master/packages/markdownlint-config",
+  "repository": {
+    "url": "https://github.com/Lehoczky/configs.git",
+    "type": "git"
+  },
   "publishConfig": {
     "access": "public"
   }
