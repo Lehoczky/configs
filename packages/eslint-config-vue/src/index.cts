@@ -2,7 +2,7 @@ import typescriptConfig from "@lehoczky/eslint-config-typescript"
 import { getTsConfig } from "@lehoczky/eslint-config-typescript/getTsConfig.cjs"
 import type { Linter } from "eslint"
 
-export = {
+const config: Linter.Config = {
   extends: ["@lehoczky/eslint-config-typescript"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -73,4 +73,6 @@ export = {
       },
     },
   ],
-} as Linter.Config
+}
+
+export = config

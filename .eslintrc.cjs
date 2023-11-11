@@ -8,7 +8,6 @@ module.exports = defineConfig({
   },
   extends: ["@lehoczky/eslint-config-vue"],
   rules: {
-    "@typescript-eslint/consistent-type-assertions": "off",
     "@typescript-eslint/naming-convention": "off",
   },
 })

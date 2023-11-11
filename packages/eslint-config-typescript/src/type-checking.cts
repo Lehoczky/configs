@@ -1,6 +1,6 @@
 import type { Linter } from "eslint"
 
-export = {
+const config: Linter.Config = {
   rules: {
     "@typescript-eslint/no-confusing-void-expression": [
       "warn",
@@ -53,4 +53,6 @@ export = {
     "unicorn/prefer-includes": "off",
     "@typescript-eslint/prefer-includes": "warn",
   },
-} as Linter.Config
+}
+
+export = config

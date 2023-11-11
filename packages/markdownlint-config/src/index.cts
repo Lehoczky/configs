@@ -1,6 +1,6 @@
 import type { Config } from "@lehoczky/markdownlint-define-config"
 
-export = {
+const config: Config = {
   "blanks-around-fences": false,
   "blanks-around-headings": false,
   "blanks-around-lists": false,
@@ -24,4 +24,6 @@ export = {
   "strong-style": false,
   "ul-indent": false,
   "no-inline-html": false,
-} as Config
+}
+
+export = config

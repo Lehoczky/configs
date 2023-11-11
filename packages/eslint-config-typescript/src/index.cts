@@ -3,7 +3,7 @@ import type { Linter } from "eslint"
 import { getTsConfig } from "./getTsConfig.cjs"
 import typeCheckingConfig from "./type-checking.cjs"
 
-export = {
+const config: Linter.Config = {
   env: {
     es6: true,
     browser: true,
@@ -105,4 +105,6 @@ export = {
       },
     },
   ],
-} as Linter.Config
+}
+
+export = config
