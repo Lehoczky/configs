@@ -12,26 +12,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out Git repository
+      - name: Check out Git repository ⏬
         uses: actions/checkout@v3
 
-      - name: Enable Corepack
+      - name: Enable Corepack 💠
         run: corepack enable
 
-      - name: Set up Node.js
+      - name: Set up Node.js 💿
         uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: "https://registry.npmjs.org"
           cache: pnpm
 
-      - name: Install dependencies
+      - name: Install dependencies 📦
         run: pnpm install
 
-      - name: Build packages
+      - name: Lint 🧹
+        run: pnpm lint
+
+      - name: Build packages 👷‍♂️
         run: pnpm -r build
 
-      - name: Release packages
+      - name: Release packages 🚀
         run: pnpm -r publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
