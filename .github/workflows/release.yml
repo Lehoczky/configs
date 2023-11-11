@@ -28,11 +28,11 @@ jobs:
       - name: Install dependencies 📦
         run: pnpm install
 
-      - name: Lint 🧹
-        run: pnpm lint
-
       - name: Build packages 👷‍♂️
         run: pnpm -r build
+
+      - name: Lint 🧹
+        run: pnpm lint
 
       - name: Release packages 🚀
         run: pnpm -r publish
