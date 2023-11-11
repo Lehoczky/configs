@@ -1,7 +1,7 @@
 {
   "name": "@lehoczky/eslint-config-vue",
   "description": "ESLint Config for Vue3 with TypeScript",
-  "version": "0.0.22",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "build": "tsc"
@@ -18,8 +18,8 @@
   ],
   "dependencies": {
     "@lehoczky/eslint-config-typescript": "workspace:*",
-    "eslint-plugin-vue": "^9.17.0",
-    "eslint-config-prettier": "^9.0.0"
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-vue": "^9.17.0"
   },
   "peerDependencies": {
     "eslint": ">=8.38.0",
