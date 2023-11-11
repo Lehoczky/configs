@@ -1,5 +1,7 @@
 # Prettier Config
 
+[![npm version](https://badge.fury.io/js/@lehoczky%2Fprettier-config.svg)](https://badge.fury.io/js/@lehoczky%2Fprettier-config)
+
 Shared [prettier](https://prettier.io/) configuration.
 
 ## 💿 Installation

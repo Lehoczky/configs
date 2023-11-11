@@ -1,5 +1,7 @@
 # Eslint Config Base
 
+[![npm version](https://badge.fury.io/js/@lehoczky%2Feslint-config-base.svg)](https://badge.fury.io/js/@lehoczky%2Feslint-config-base)
+
 ESLint configuration for JavaScript projects with [prettier](https://prettier.io/).
 
 ## 💿 Installation

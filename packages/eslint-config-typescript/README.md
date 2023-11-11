@@ -1,5 +1,7 @@
 # Eslint Config TypeScript
 
+[![npm version](https://badge.fury.io/js/@lehoczky%2Feslint-config-typescript.svg)](https://badge.fury.io/js/@lehoczky%2Feslint-config-typescript)
+
 ESLint configuration for TypeScript projects with [prettier](https://prettier.io/).
 
 ## 💿 Installation

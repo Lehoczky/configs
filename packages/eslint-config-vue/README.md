@@ -1,5 +1,7 @@
 # Eslint Config Vue
 
+[![npm version](https://badge.fury.io/js/@lehoczky%2Feslint-config-vue.svg)](https://badge.fury.io/js/@lehoczky%2Feslint-config-vue)
+
 ESLint configuration for Vue projects with [TypeScript](https://www.typescriptlang.org/) and [prettier](https://prettier.io/).
 
 ## 💿 Installation
