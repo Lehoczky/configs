@@ -22,14 +22,14 @@
     "eslint-plugin-vue": "^9.18.1"
   },
   "peerDependencies": {
-    "eslint": ">=8.38.0",
+    "eslint": ">=8.54.0",
     "typescript": ">=5.0"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.7",
     "@types/node": "20",
-    "eslint": "^8.53.0",
-    "typescript": "^5.2.2"
+    "eslint": "^8.54.0",
+    "typescript": "~5.2.2"
   },
   "author": {
     "name": "Zoltan Lehoczky",
