@@ -17,8 +17,8 @@
   ],
   "devDependencies": {
     "@lehoczky/markdownlint-define-config": "^0.1.2",
-    "@types/node": "20",
-    "prettier": "^3.1.0",
+    "@types/node": "20.11.7",
+    "prettier": "^3.2.4",
     "typescript": "~5.2.2"
   },
   "author": {
