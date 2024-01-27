@@ -20,7 +20,7 @@ pnpm add -D prettier @lehoczky/prettier-config
 
 or when extending an existing config:
 
-`prettierrc.mjs`:
+`.prettierrc.mjs`:
 
 ```js
 import config from "@lehoczky/prettier-config"
@@ -38,5 +38,24 @@ Example command:
   "scripts": {
     "format:fix": "prettier . --write --ignore-unknown"
   }
+}
+```
+
+Example for using with [tailwindcss](https://tailwindcss.com/) and [prettier-plugin-tailwindcss
+](https://github.com/tailwindlabs/prettier-plugin-tailwindcss):
+
+```sh
+pnpm add -D prettier prettier-plugin-tailwindcss @lehoczky/prettier-config
+```
+
+`.prettierrc.mjs`:
+
+```js
+import config from "@lehoczky/prettier-config"
+
+/** @type {import("prettier").Options} */
+export default {
+  ...config,
+  plugins: ["prettier-plugin-tailwindcss"],
 }
 ```
