@@ -97,7 +97,15 @@ const config: Linter.Config = {
     "jsdoc/tag-lines": [
       "warn",
       "always",
-      { startLines: 1, applyToEndTag: false },
+      {
+        startLines: 1,
+        applyToEndTag: false,
+        tags: {
+          param: {
+            lines: "never",
+          },
+        },
+      },
     ],
     "jsdoc/no-defaults": "warn",
     "jsdoc/no-types": "warn",
