@@ -2,10 +2,13 @@
   "name": "configs-monorepo",
   "private": true,
   "scripts": {
+    "eslint:check": "eslint . --ext .js,.cjs,.ts,.cts,.vue --max-warnings=0",
     "eslint:fix": "eslint . --ext .js,.cjs,.ts,.cts,.vue --max-warnings=0 --fix",
+    "format:check": "prettier . --check --ignore-unknown",
     "format:fix": "prettier . --write --ignore-unknown",
-    "markdownlint:fix": "markdownlint-cli2 \"**/*.md\" \"!**/node_modules\"",
-    "lint": "npm run format:fix && npm run eslint:fix && npm run markdownlint:fix",
+    "markdownlint:check": "markdownlint-cli2 \"**/*.md\" \"!**/node_modules\"",
+    "markdownlint:fix": "markdownlint-cli2 --fix \"**/*.md\" \"!**/node_modules\"",
+    "lint": "npm run format:check && npm run eslint:check && npm run markdownlint:check",
     "up-version": "lerna version"
   },
   "devDependencies": {
