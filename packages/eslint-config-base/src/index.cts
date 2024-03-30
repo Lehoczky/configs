@@ -108,7 +108,6 @@ const config: Linter.Config = {
       },
     ],
     "jsdoc/no-defaults": "warn",
-    "jsdoc/no-types": "warn",
 
     // Import
     "import/no-useless-path-segments": "warn",

@@ -1,7 +1,7 @@
 import type { Linter } from "eslint"
 
 import { getTsConfig } from "./getTsConfig.cjs"
-import typeCheckingConfig from "./type-checking.cjs"
+import rulesRequiringTypeChecks from "./type-checking.cjs"
 
 const config: Linter.Config = {
   env: {
@@ -90,7 +90,10 @@ const config: Linter.Config = {
       parserOptions: {
         project: getTsConfig(),
       },
-      ...typeCheckingConfig,
+      rules: {
+        ...rulesRequiringTypeChecks,
+        "jsdoc/no-types": "warn",
+      },
     },
     {
       files: ["*.d.ts"],
