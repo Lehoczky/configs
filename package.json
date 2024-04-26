@@ -8,8 +8,7 @@
     "format:fix": "prettier . --write --ignore-unknown",
     "markdownlint:check": "markdownlint-cli2 \"**/*.md\" \"!**/node_modules\"",
     "markdownlint:fix": "markdownlint-cli2 --fix \"**/*.md\" \"!**/node_modules\"",
-    "lint": "npm run format:check && npm run eslint:check && npm run markdownlint:check",
-    "up-version": "lerna version"
+    "lint": "npm run format:check && npm run eslint:check && npm run markdownlint:check"
   },
   "devDependencies": {
     "@lehoczky/eslint-config-base": "workspace:*",
@@ -17,12 +16,11 @@
     "@lehoczky/eslint-config-vue": "workspace:*",
     "@lehoczky/markdownlint-config": "workspace:*",
     "@lehoczky/prettier-config": "workspace:*",
-    "@lerna-lite/cli": "^3.3.1",
-    "@lerna-lite/version": "^3.3.1",
+    "@lerna-lite/cli": "^3.3.3",
+    "@lerna-lite/version": "^3.3.3",
     "eslint": "^8.57.0",
-    "eslint-define-config": "^1.24.1",
     "markdownlint-cli2": "^0.11.0",
     "prettier": "^3.2.5",
-    "typescript": "~5.3.0"
+    "typescript": "~5.3.3"
   }
 }
