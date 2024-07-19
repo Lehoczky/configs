@@ -19,6 +19,9 @@ The following configuration files are used by most projects, but they cannot be 
 ```ini
 # Enforce Unix newlines
 * text=auto eol=lf
+
+# Fix syntax highlighting on GitHub to allow comments
+.vscode/*.json linguist-language=JSON-with-Comments
 ```
 
 `.editorconfig`:
