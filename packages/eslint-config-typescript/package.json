@@ -19,8 +19,8 @@
   ],
   "dependencies": {
     "@lehoczky/eslint-config-base": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^7.14.1",
-    "@typescript-eslint/parser": "^7.14.1",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
     "eslint-config-prettier": "^9.1.0"
   },
   "peerDependencies": {
@@ -28,10 +28,10 @@
     "typescript": ">=5.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.10",
+    "@types/eslint": "^8.56.11",
     "@types/node": "20.14.8",
     "eslint": "^8.57.0",
-    "typescript": "~5.5.2"
+    "typescript": "~5.5.3"
   },
   "author": {
     "name": "Zoltan Lehoczky",
