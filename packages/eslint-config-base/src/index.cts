@@ -6,7 +6,6 @@ const config: Linter.Config = {
   plugins: [
     "only-warn",
     "unicorn",
-    "sonarjs",
     "simple-import-sort",
     "promise",
     "jsdoc",
@@ -81,12 +80,6 @@ const config: Linter.Config = {
     "unicorn/no-typeof-undefined": "warn",
     "unicorn/prefer-logical-operator-over-ternary": "warn",
 
-    // Sonar
-    "sonarjs/no-identical-conditions": "warn",
-    "sonarjs/no-collapsible-if": "warn",
-    "sonarjs/prefer-immediate-return": "warn",
-    "sonarjs/prefer-object-literal": "warn",
-
     // Promise
     "promise/prefer-await-to-then": "warn",
 
@@ -110,7 +103,6 @@ const config: Linter.Config = {
     "jsdoc/no-defaults": "warn",
 
     // Import
-    "import/no-useless-path-segments": "warn",
     "import/newline-after-import": "warn",
 
     // Simple import sort

@@ -23,7 +23,7 @@ const rules: Linter.Config["rules"] = {
   "dot-notation": "off",
   "@typescript-eslint/dot-notation": "warn",
   "no-throw-literal": "off",
-  "@typescript-eslint/no-throw-literal": [
+  "@typescript-eslint/only-throw-error": [
     "warn",
     {
       allowThrowingUnknown: true,
