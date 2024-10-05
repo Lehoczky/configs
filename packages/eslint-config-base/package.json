@@ -1,39 +1,38 @@
 {
   "name": "@lehoczky/eslint-config-base",
-  "version": "1.2.6",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
     "build": "tsc"
   },
   "type": "module",
-  "main": "dist/index.cjs",
-  "types": "dist/index.d.cts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.cjs",
+    ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.10.3",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsdoc": "^48.8.3",
+    "eslint-plugin-import-x": "^4.2.1",
+    "eslint-plugin-jsdoc": "^50.2.3",
     "eslint-plugin-only-warn": "^1.1.0",
-    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-sonarjs": "^1.0.3",
-    "eslint-plugin-unicorn": "^54.0.0"
+    "eslint-plugin-unicorn": "^55.0.0",
+    "globals": "^15.9.0"
   },
   "peerDependencies": {
-    "eslint": ">=8.56.0"
+    "eslint": ">=9.0.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.11",
-    "@types/node": "20.14.8",
-    "eslint": "^8.57.0",
-    "typescript": "~5.5.3"
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "20.16.5",
+    "eslint": "^9.10.0",
+    "typescript": "~5.6.2"
   },
   "author": {
     "name": "Zoltan Lehoczky",

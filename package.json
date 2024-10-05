@@ -16,12 +16,12 @@
     "@lehoczky/eslint-config-vue": "workspace:*",
     "@lehoczky/markdownlint-config": "workspace:*",
     "@lehoczky/prettier-config": "workspace:*",
-    "@lerna-lite/cli": "^3.7.1",
-    "@lerna-lite/version": "^3.7.1",
-    "eslint": "^8.57.0",
-    "markdownlint-cli2": "^0.13.0",
+    "@lerna-lite/cli": "^3.9.1",
+    "@lerna-lite/version": "^3.9.1",
+    "eslint": "^9.10.0",
+    "markdownlint-cli2": "^0.14.0",
     "prettier": "^3.3.3",
-    "typescript": "~5.5.3"
+    "typescript": "~5.6.2"
   },
-  "packageManager": "pnpm@9.6.0"
+  "packageManager": "pnpm@9.10.0"
 }
