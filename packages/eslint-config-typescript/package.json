@@ -3,15 +3,20 @@
   "version": "2.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "clean-dist": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\"",
+    "build": "npm run clean-dist && tsc"
   },
   "type": "module",
-  "main": "dist/index.cjs",
-  "types": "dist/index.d.cts",
   "exports": {
-    ".": "./dist/index.cjs",
-    "./package.json": "./package.json",
-    "./type-checking.cjs": "./dist/type-checking.cjs"
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./configs/*": {
+      "default": "./dist/configs/*.js",
+      "types": "./dist/configs/*.d.ts"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"
@@ -19,7 +24,7 @@
   "dependencies": {
     "@lehoczky/eslint-config-base": "workspace:*",
     "eslint-config-prettier": "^9.1.0",
-    "typescript-eslint": "^8.6.0"
+    "typescript-eslint": "^8.10.0"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
@@ -27,9 +32,9 @@
   },
   "devDependencies": {
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "20.14.8",
-    "eslint": "^9.10.0",
-    "typescript": "~5.6.2"
+    "@types/node": "20.16.13",
+    "eslint": "^9.13.0",
+    "typescript": "~5.6.3"
   },
   "author": {
     "name": "Zoltan Lehoczky",

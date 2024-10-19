@@ -1,3 +1,10 @@
-import eslintConfigLehoczky from "@lehoczky/eslint-config-base"
+import { configLehoczkyTypescript } from "@lehoczky/eslint-config-typescript"
 
-export default [...eslintConfigLehoczky]
+export default [
+  ...configLehoczkyTypescript({
+    typeCheckWithParserOptions: {
+      projectService: true,
+      tsconfigRootDir: import.meta.dirname,
+    },
+  }),
+]

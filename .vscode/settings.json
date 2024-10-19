@@ -3,5 +3,5 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["sonarjs"]
+  "cSpell.words": ["camelcase", "sonarjs"]
 }

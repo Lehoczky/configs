@@ -11,7 +11,7 @@ const people: Person[] = [
   { name: "Charlie", age: 35 },
 ]
 
-// eslint-disable-next-line no-console
+// eslint-disable-next-line no-console, no-var
 var log = console.log
 
 // Use a for...of loop to iterate over the array
@@ -73,8 +73,14 @@ class Dog extends Animal {
 const dog = new Dog("Buddy")
 dog.bark()
 
+// eslint-disable-next-line no-var
 var fn = (): string => {
+  // eslint-disable-next-line prefer-template
   return "hello" + 1
 }
 
 log(car1, car2, favoriteFruit, numericValue, fn())
+
+export async function wait(ms: number): Promise<void> {
+  await new Promise<void>((resolve) => void setTimeout(resolve, ms))
+}
