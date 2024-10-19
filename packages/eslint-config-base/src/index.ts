@@ -1,5 +1,6 @@
 import "eslint-plugin-only-warn"
 import eslintPluginUnicorn from "eslint-plugin-unicorn"
+import gitignore from "eslint-config-flat-gitignore"
 import globals from "globals"
 import js from "@eslint/js"
 import type { Linter } from "eslint"
@@ -10,28 +11,56 @@ import eslintConfigPrettier from "eslint-config-prettier"
 
 export const commonIgnores: Linter.Config[] = [
   {
+    name: "lehoczky/ignores/common",
     ignores: [
-      "*.min.*",
-      "CHANGELOG.md",
-      "dist",
-      "LICENSE*",
-      "output",
-      "coverage",
-      "temp",
-      "cache",
-      "package-lock.json",
-      "pnpm-lock.yaml",
-      "yarn.lock",
-      "__snapshots__",
-      "!.github",
-      "!.vscode",
+      "**/node_modules",
+      "**/dist",
+      "**/package-lock.json",
+      "**/yarn.lock",
+      "**/pnpm-lock.yaml",
+      "**/bun.lockb",
+
+      "**/output",
+      "**/coverage",
+      "**/temp",
+      "**/.temp",
+      "**/tmp",
+      "**/.tmp",
+      "**/.history",
+      "**/.vitepress/cache",
+      "**/.nuxt",
+      "**/.next",
+      "**/.svelte-kit",
+      "**/.vercel",
+      "**/.changeset",
+      "**/.idea",
+      "**/.cache",
+      "**/.output",
+      "**/.vite-inspect",
+      "**/.yarn",
+      "**/vite.config.*.timestamp-*",
+
+      "**/CHANGELOG*.md",
+      "**/*.min.*",
+      "**/LICENSE*",
+      "**/__snapshots__",
+      "**/auto-import?(s).d.ts",
+      "**/components.d.ts",
     ],
   },
 ]
 
-export const baseEslint: Linter.Config[] = [
+export const javascript: Linter.Config[] = [
   js.configs.recommended,
   {
+    name: "lehoczky/javascript/eslint",
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.es2024,
+        ...globals.node,
+      },
+    },
     rules: {
       complexity: ["warn", { max: 13 }],
       "default-case-last": "warn",
@@ -69,13 +98,22 @@ export const baseEslint: Linter.Config[] = [
       yoda: ["warn", "never", { exceptRange: true }],
     },
   },
+  {
+    files: ["**/*.cjs"],
+    name: "lehoczky/javascript/commonjs-globals",
+    languageOptions: {
+      globals: {
+        ...globals.es2024,
+        ...globals.node,
+        ...globals.commonjs,
+      },
+    },
+  },
 ]
 
 export const unicorn: Linter.Config[] = [
   {
-    languageOptions: {
-      globals: globals.builtin,
-    },
+    name: "lehoczky/javascript/unicorn",
     plugins: {
       unicorn: eslintPluginUnicorn,
     },
@@ -83,8 +121,10 @@ export const unicorn: Linter.Config[] = [
       "unicorn/catch-error-name": "warn",
       "unicorn/error-message": "warn",
       "unicorn/new-for-builtins": "warn",
+      "unicorn/no-array-for-each": "warn",
       "unicorn/no-array-push-push": "warn",
       "unicorn/no-array-reduce": ["warn", { allowSimpleOperations: true }],
+      "unicorn/no-await-in-promise-methods": "warn",
       "unicorn/no-instanceof-array": "warn",
       "unicorn/no-typeof-undefined": "warn",
       "unicorn/no-unreadable-array-destructuring": "warn",
@@ -98,9 +138,26 @@ export const unicorn: Linter.Config[] = [
       "unicorn/prefer-array-flat": "warn",
       "unicorn/prefer-array-flat-map": "warn",
       "unicorn/prefer-array-some": "warn",
+      "unicorn/prefer-blob-reading-methods": "warn",
+      "unicorn/prefer-code-point": "warn",
+      "unicorn/prefer-date-now": "warn",
       "unicorn/prefer-default-parameters": "warn",
+      "unicorn/prefer-dom-node-append": "warn",
+      "unicorn/prefer-dom-node-remove": "warn",
+      "unicorn/prefer-dom-node-text-content": "warn",
       "unicorn/prefer-includes": "warn",
+      "unicorn/prefer-keyboard-event-key": "warn",
       "unicorn/prefer-logical-operator-over-ternary": "warn",
+      "unicorn/prefer-math-min-max": "warn",
+      "unicorn/prefer-modern-dom-apis": "warn",
+      "unicorn/prefer-modern-math-apis": "warn",
+      "unicorn/prefer-negative-index": "warn",
+      "unicorn/prefer-node-protocol": "warn",
+      "unicorn/prefer-number-properties": "warn",
+      "unicorn/prefer-object-from-entries": "warn",
+      "unicorn/prefer-optional-catch-binding": "warn",
+      "unicorn/prefer-spread": "warn",
+      "unicorn/prefer-string-raw": "warn",
       "unicorn/prefer-ternary": "warn",
       "unicorn/throw-new-error": "warn",
     },
@@ -109,6 +166,7 @@ export const unicorn: Linter.Config[] = [
 
 export const simpleImportSort: Linter.Config[] = [
   {
+    name: "lehoczky/javascript/simple-import-sort",
     plugins: {
       "simple-import-sort": simpleImportSortPlugin,
     },
@@ -120,10 +178,14 @@ export const simpleImportSort: Linter.Config[] = [
 
 export const promises: Linter.Config[] = [
   {
+    name: "lehoczky/javascript/promise",
     plugins: {
       promise: pluginPromise,
     },
     rules: {
+      "promise/no-nesting": "warn",
+      "promise/no-return-wrap": "warn",
+      "promise/param-names": "warn",
       "promise/prefer-await-to-then": "warn",
     },
   },
@@ -131,6 +193,7 @@ export const promises: Linter.Config[] = [
 
 export const jsdoc: Linter.Config[] = [
   {
+    name: "lehoczky/javascript/jsdoc",
     plugins: {
       jsdoc: jsdocPlugin,
     },
@@ -157,8 +220,9 @@ export const jsdoc: Linter.Config[] = [
 ]
 
 const config: Linter.Config[] = [
+  gitignore({ name: "lehoczky/ignores/gitignore", strict: false }),
   ...commonIgnores,
-  ...baseEslint,
+  ...javascript,
   ...unicorn,
   ...simpleImportSort,
   ...promises,

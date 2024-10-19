@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "clean-dist": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\"",
+    "build": "npm run clean-dist && tsc"
   },
   "type": "module",
   "main": "dist/index.js",
@@ -16,14 +17,15 @@
     "dist"
   ],
   "dependencies": {
+    "eslint-config-flat-gitignore": "^0.3.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import-x": "^4.2.1",
-    "eslint-plugin-jsdoc": "^50.2.3",
+    "eslint-plugin-import-x": "^4.3.1",
+    "eslint-plugin-jsdoc": "^50.4.3",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unicorn": "^55.0.0",
-    "globals": "^15.9.0"
+    "globals": "^15.11.0"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0"
@@ -31,8 +33,8 @@
   "devDependencies": {
     "@types/eslint__js": "^8.42.3",
     "@types/node": "20.16.5",
-    "eslint": "^9.10.0",
-    "typescript": "~5.6.2"
+    "eslint": "^9.13.0",
+    "typescript": "~5.6.3"
   },
   "author": {
     "name": "Zoltan Lehoczky",
