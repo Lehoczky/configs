@@ -7,10 +7,15 @@
     "build": "npm run clean-dist && tsc"
   },
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./configs/*": {
+      "default": "./dist/configs/*.js",
+      "types": "./dist/configs/*.d.ts"
+    },
     "./package.json": "./package.json"
   },
   "files": [
@@ -24,7 +29,7 @@
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-unicorn": "^55.0.0",
+    "eslint-plugin-unicorn": "^56.0.0",
     "globals": "^15.11.0"
   },
   "peerDependencies": {
@@ -32,7 +37,7 @@
   },
   "devDependencies": {
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "20.16.5",
+    "@types/node": "20.16.13",
     "eslint": "^9.13.0",
     "typescript": "~5.6.3"
   },
