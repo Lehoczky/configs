@@ -30,6 +30,12 @@ export const typescript = [
       ],
       "@typescript-eslint/no-confusing-non-null-assertion": "warn",
       "@typescript-eslint/no-duplicate-enum-values": "warn",
+      "@typescript-eslint/no-empty-object-type": [
+        "warn",
+        {
+          allowInterfaces: "with-single-extends",
+        },
+      ],
       "@typescript-eslint/no-extraneous-class": "warn",
       "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "warn",
       "@typescript-eslint/prefer-for-of": "warn",
