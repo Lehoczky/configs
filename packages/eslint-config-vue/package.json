@@ -13,6 +13,10 @@
       "default": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
+    "./configs/*": {
+      "default": "./dist/configs/*.js",
+      "types": "./dist/configs/*.d.ts"
+    },
     "./package.json": "./package.json"
   },
   "files": [
@@ -20,8 +24,7 @@
   ],
   "dependencies": {
     "@lehoczky/eslint-config-typescript": "workspace:*",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-vue": "^9.29.0"
+    "eslint-plugin-vue": "^9.29.1"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",

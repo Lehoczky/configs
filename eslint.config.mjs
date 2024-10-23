@@ -1,8 +1,8 @@
-import { configLehoczkyTypescript } from "@lehoczky/eslint-config-typescript"
+import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
 
 export default [
-  ...configLehoczkyTypescript({
-    typeCheckWithParserOptions: {
+  ...configLehoczkyVue({
+    parserOptionsForTypeChecking: {
       projectService: true,
       tsconfigRootDir: import.meta.dirname,
     },
