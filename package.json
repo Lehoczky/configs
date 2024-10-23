@@ -20,7 +20,7 @@
     "@lehoczky/prettier-config": "workspace:*",
     "@lerna-lite/cli": "^3.10.0",
     "@lerna-lite/version": "^3.10.0",
-    "@types/node": "^20.16.13",
+    "@types/node": "20.16.13",
     "eslint": "^9.13.0",
     "markdownlint-cli2": "^0.14.0",
     "prettier": "^3.3.3",
