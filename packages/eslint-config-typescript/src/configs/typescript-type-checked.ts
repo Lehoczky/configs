@@ -1,9 +1,10 @@
 import type { Linter } from "eslint"
-import type { ConfigWithExtends } from "typescript-eslint"
 import ts from "typescript-eslint"
 
+import type { ParserOptions } from "../types/parserOptions.js"
+
 export const typescriptTypeChecked = (
-  parserOptions: ConfigWithExtends["languageOptions"]["parserOptions"],
+  parserOptions: ParserOptions,
 ): Linter.Config[] =>
   [
     {
@@ -51,7 +52,7 @@ export const typescriptTypeChecked = (
             format: ["camelCase"],
             filter: {
               // Ignore properties that require quotes
-              regex: "^[{A-Z} | {0-9}] | [- ] | [/]",
+              regex: "^[{A-Z}|{0-9}]|[- ]|[/]",
               match: false,
             },
           },
@@ -65,7 +66,8 @@ export const typescriptTypeChecked = (
       },
     },
     {
+      ...ts.configs.disableTypeChecked,
       files: ["**/*.?([cm])js"],
-      ...(ts.configs.disableTypeChecked as Linter.Config),
+      name: "lehoczky/javascript/disable-type-checked",
     },
   ] as Linter.Config[]

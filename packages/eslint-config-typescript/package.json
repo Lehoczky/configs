@@ -23,7 +23,6 @@
   ],
   "dependencies": {
     "@lehoczky/eslint-config-base": "workspace:*",
-    "eslint-config-prettier": "^9.1.0",
     "typescript-eslint": "^8.10.0"
   },
   "peerDependencies": {
@@ -31,7 +30,6 @@
     "typescript": ">=5.0"
   },
   "devDependencies": {
-    "@types/eslint__js": "^8.42.3",
     "@types/node": "20.16.13",
     "eslint": "^9.13.0",
     "typescript": "~5.6.3"
