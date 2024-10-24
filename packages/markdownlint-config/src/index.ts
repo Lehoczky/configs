@@ -1,6 +1,6 @@
 import type { Config } from "@lehoczky/markdownlint-define-config"
 
-const config: Config = {
+export const markdownlintConfigLehoczky: Config = {
   "blanks-around-fences": false,
   "blanks-around-headings": false,
   "blanks-around-lists": false,
@@ -26,4 +26,4 @@ const config: Config = {
   "no-inline-html": false,
 }
 
-export = config
+export default markdownlintConfigLehoczky
