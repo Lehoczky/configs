@@ -1,10 +1,9 @@
 import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
 
-export default [
-  ...configLehoczkyVue({
-    parserOptionsForTypeChecking: {
-      projectService: true,
-      tsconfigRootDir: import.meta.dirname,
-    },
-  }),
-]
+/** @type {import("eslint").Linter.Config[]} */
+export default configLehoczkyVue({
+  parserOptionsForTypeChecking: {
+    projectService: true,
+    tsconfigRootDir: import.meta.dirname,
+  },
+})

@@ -2,8 +2,8 @@
   "name": "configs-monorepo",
   "private": true,
   "scripts": {
-    "eslint:check": "eslint . --ext .js,.cjs,.ts,.cts,.vue --max-warnings=0",
-    "eslint:fix": "eslint . --ext .js,.cjs,.ts,.cts,.vue --max-warnings=0 --fix",
+    "eslint:check": "eslint --max-warnings=0",
+    "eslint:fix": "eslint --max-warnings=0 --fix",
     "eslint:inspect": "eslint-config-inspector --open=false",
     "format:check": "prettier . --check --ignore-unknown",
     "format:fix": "prettier . --write --ignore-unknown",

@@ -2,35 +2,34 @@
 
 [![npm version](https://badge.fury.io/js/@lehoczky%2Feslint-config-base.svg)](https://badge.fury.io/js/@lehoczky%2Feslint-config-base)
 
-ESLint configuration for JavaScript projects with [prettier](https://prettier.io/).
+ESLint configuration for JavaScript projects. Supports [prettier](https://prettier.io/) by default.
 
 ## 💿 Installation
 
 ```sh
-pnpm add -D eslint prettier @lehoczky/eslint-config-base
+pnpm add -D eslint @lehoczky/eslint-config-base
 ```
 
 ## 💻 Usage
 
-`.eslintrc.cjs`:
+`eslint.config.mjs`:
 
 ```js
-module.exports = {
-  root: true,
-  env: {
-    // Or other environments you use
-    node: true,
-  },
-  extends: ["@lehoczky/eslint-config-base"],
-}
+import { configLehoczkyJavascript } from "@lehoczky/eslint-config-base"
+
+/** @type {import("eslint").Linter.Config[]} */
+export default configLehoczkyJavascript()
 ```
 
-Example command:
+## 📢 Commands
+
+`package.json`:
 
 ```json
 {
   "scripts": {
-    "eslint:fix": "eslint . --ext .js --max-warnings=0 --fix"
+    "eslint:check": "eslint --max-warnings=0",
+    "eslint:fix": "eslint --max-warnings=0 --fix"
   }
 }
 ```
