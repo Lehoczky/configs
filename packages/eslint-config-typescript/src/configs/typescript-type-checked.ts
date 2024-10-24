@@ -9,6 +9,7 @@ export const typescriptTypeChecked = (
   [
     {
       name: "lehoczky/typescript/type-checked-parser-options",
+      ignores: ["**/*.astro"],
       languageOptions: { parserOptions },
     },
     {

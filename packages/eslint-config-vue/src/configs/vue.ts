@@ -39,8 +39,9 @@ export const vue = (parserOptions: ParserOptions = {}): Linter.Config[] => [
       "vue/no-sparse-arrays": "warn",
       "vue/no-useless-concat": "warn",
       "vue/prefer-template": "warn",
-      "vue/require-explicit-slots": "warn",
 
+      // Does not work well, when extending native HTML interfaces
+      "vue/prop-name-casing": "off",
       // Mostly a legacy pattern
       "vue/multi-word-component-names": "off",
       // Does not work well with `defineEmits`
