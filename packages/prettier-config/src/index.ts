@@ -5,4 +5,4 @@ const config: Config = {
   semi: false,
 }
 
-export = config
+export default config
