@@ -5,17 +5,18 @@
   "license": "MIT",
   "scripts": {
     "clean-dist": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\"",
-    "build": "npm run clean-dist && tsc"
+    "build": "npm run clean-dist && tsc",
+    "publint": "publint"
   },
   "type": "module",
   "exports": {
     ".": {
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
     "./configs/*": {
-      "default": "./dist/configs/*.js",
-      "types": "./dist/configs/*.d.ts"
+      "types": "./dist/configs/*.d.ts",
+      "default": "./dist/configs/*.js"
     },
     "./package.json": "./package.json"
   },
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@types/node": "20.16.13",
     "eslint": "^9.13.0",
+    "publint": "^0.2.12",
     "typescript": "~5.6.3"
   },
   "author": {
@@ -42,9 +44,14 @@
   },
   "homepage": "https://github.com/Lehoczky/configs/tree/master/packages/eslint-config-vue",
   "repository": {
-    "url": "https://github.com/Lehoczky/configs.git",
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/Lehoczky/configs.git",
+    "directory": "packages/eslint-config-vue"
   },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
   "publishConfig": {
     "access": "public"
   }
