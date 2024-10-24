@@ -4,13 +4,20 @@
   "version": "1.3.0",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "clean-dist": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\"",
+    "build": "npm run clean-dist && tsc",
+    "publint": "publint"
   },
   "type": "module",
-  "main": "dist/index.cjs",
-  "types": "dist/index.d.cts",
   "exports": {
-    ".": "./dist/index.cjs",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./configs/*": {
+      "types": "./dist/configs/*.d.ts",
+      "default": "./dist/configs/*.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [
@@ -18,18 +25,17 @@
   ],
   "dependencies": {
     "@lehoczky/eslint-config-typescript": "workspace:*",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-vue": "^9.28.0"
+    "eslint-plugin-vue": "^9.29.1"
   },
   "peerDependencies": {
-    "eslint": ">=8.56.0",
-    "typescript": ">=5.6.2"
+    "eslint": ">=9.0.0",
+    "typescript": ">=5.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.12",
-    "@types/node": "20.16.10",
-    "eslint": "^8.57.1",
-    "typescript": "~5.5.4"
+    "@types/node": "20.16.13",
+    "eslint": "^9.13.0",
+    "publint": "^0.2.12",
+    "typescript": "~5.6.3"
   },
   "author": {
     "name": "Zoltan Lehoczky",
@@ -38,9 +44,14 @@
   },
   "homepage": "https://github.com/Lehoczky/configs/tree/master/packages/eslint-config-vue",
   "repository": {
-    "url": "https://github.com/Lehoczky/configs.git",
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/Lehoczky/configs.git",
+    "directory": "packages/eslint-config-vue"
   },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
   "publishConfig": {
     "access": "public"
   }

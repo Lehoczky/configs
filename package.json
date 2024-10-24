@@ -2,8 +2,9 @@
   "name": "configs-monorepo",
   "private": true,
   "scripts": {
-    "eslint:check": "eslint . --ext .js,.cjs,.ts,.cts,.vue --max-warnings=0",
-    "eslint:fix": "eslint . --ext .js,.cjs,.ts,.cts,.vue --max-warnings=0 --fix",
+    "eslint:check": "eslint --max-warnings=0",
+    "eslint:fix": "eslint --max-warnings=0 --fix",
+    "eslint:inspect": "eslint-config-inspector --open=false",
     "format:check": "prettier . --check --ignore-unknown",
     "format:fix": "prettier . --write --ignore-unknown",
     "markdownlint:check": "markdownlint-cli2 \"**/*.md\" \"!**/node_modules\"",
@@ -11,17 +12,20 @@
     "lint": "npm run format:check && npm run eslint:check && npm run markdownlint:check"
   },
   "devDependencies": {
+    "@eslint/config-inspector": "^0.5.5",
     "@lehoczky/eslint-config-base": "workspace:*",
     "@lehoczky/eslint-config-typescript": "workspace:*",
     "@lehoczky/eslint-config-vue": "workspace:*",
     "@lehoczky/markdownlint-config": "workspace:*",
     "@lehoczky/prettier-config": "workspace:*",
-    "@lerna-lite/cli": "^3.9.2",
-    "@lerna-lite/version": "^3.9.2",
-    "eslint": "^8.57.1",
+    "@lerna-lite/cli": "^3.10.0",
+    "@lerna-lite/version": "^3.10.0",
+    "@types/node": "20.16.13",
+    "eslint": "^9.13.0",
     "markdownlint-cli2": "^0.14.0",
     "prettier": "^3.3.3",
-    "typescript": "~5.5.4"
+    "typescript": "~5.6.3",
+    "vue": "^3.5.12"
   },
-  "packageManager": "pnpm@9.12.0"
+  "packageManager": "pnpm@9.12.2"
 }

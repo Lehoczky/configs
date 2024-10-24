@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/@lehoczky%2Feslint-config-vue.svg)](https://badge.fury.io/js/@lehoczky%2Feslint-config-vue)
 
-ESLint configuration for Vue projects with [TypeScript](https://www.typescriptlang.org/) and [prettier](https://prettier.io/).
+ESLint configuration for Vue projects with [TypeScript](https://www.typescriptlang.org/). Supports [prettier](https://prettier.io/) by default.
 
 ## 💿 Installation
 
@@ -13,45 +13,50 @@ pnpm create vite <app-name> --template vue-ts
 cd <app-name>
 ```
 
-Install the dependencies for the config:
+Install eslint and the config:
 
 ```sh
-pnpm add -D eslint prettier @lehoczky/eslint-config-vue
+pnpm add -D eslint @lehoczky/eslint-config-vue
 ```
 
 ## 💻 Usage
 
-`.eslintrc.cjs`:
+### With Type Checking
+
+`eslint.config.mjs`:
 
 ```js
-module.exports = {
-  root: true,
-  extends: ["@lehoczky/eslint-config-vue"],
-}
+import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
+
+/** @type {import("eslint").Linter.Config[]} */
+export default configLehoczkyVue({
+  parserOptionsForTypeChecking: {
+    projectService: true,
+    tsconfigRootDir: import.meta.dirname,
+  },
+})
 ```
 
-Example command:
+See more: [typescript-eslint | Linting with Type Information](https://typescript-eslint.io/getting-started/typed-linting)
+
+### Without Type Checking
+
+```js
+import { configLehoczkyTypescript } from "@lehoczky/eslint-config-typescript"
+
+/** @type {import("eslint").Linter.Config[]} */
+export default configLehoczkyVue()
+```
+
+## 📢 Commands
+
+`package.json`:
 
 ```json
 {
   "scripts": {
-    "eslint:fix": "eslint . --ext .js,.ts,.vue --max-warnings=0 --fix"
+    "eslint:check": "eslint --max-warnings=0",
+    "eslint:fix": "eslint --max-warnings=0 --fix"
   }
-}
-```
-
-## 🛠 TSConfig
-
-If your `tsconfig.json` file does not [include](https://www.typescriptlang.org/tsconfig#include) every TypeScript and vue file in the project, you can create a new `tsconfig.eslint.json` file and include every file in that.
-
-This config will automatically use `tsconfig.eslint.json` file if it finds one in the root of your repository:
-
-```json
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "allowJs": true
-  },
-  "include": ["src/**/*.ts", "src/**/*.vue", "./*.ts"]
 }
 ```

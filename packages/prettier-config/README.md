@@ -41,8 +41,7 @@ Example command:
 }
 ```
 
-Example for using with [tailwindcss](https://tailwindcss.com/) and [prettier-plugin-tailwindcss
-](https://github.com/tailwindlabs/prettier-plugin-tailwindcss):
+Example for using with [tailwindcss](https://tailwindcss.com/) and [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss):
 
 ```sh
 pnpm add -D prettier prettier-plugin-tailwindcss @lehoczky/prettier-config

@@ -35,6 +35,9 @@ jobs:
       - name: Lint 🧹
         run: pnpm lint
 
+      - name: Run publint on every package
+        run: pnpm -r publint
+
       - name: Release packages 🚀
         run: pnpm -r publish --no-git-checks
         env:

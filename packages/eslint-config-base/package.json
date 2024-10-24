@@ -3,36 +3,44 @@
   "version": "1.3.0",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "clean-dist": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\"",
+    "build": "npm run clean-dist && tsc",
+    "publint": "publint"
   },
   "type": "module",
-  "main": "dist/index.cjs",
-  "types": "dist/index.d.cts",
   "exports": {
-    ".": "./dist/index.cjs",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./configs/*": {
+      "types": "./dist/configs/*.d.ts",
+      "default": "./dist/configs/*.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.10.4",
+    "eslint-config-flat-gitignore": "^0.3.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsdoc": "^50.3.1",
+    "eslint-plugin-jsdoc": "^50.4.3",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-unicorn": "^56.0.0"
+    "eslint-plugin-unicorn": "^56.0.0",
+    "globals": "^15.11.0"
   },
   "peerDependencies": {
-    "eslint": ">=8.56.0"
+    "eslint": ">=9.0.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.12",
-    "@types/node": "20.16.10",
-    "eslint": "^8.57.1",
-    "typescript": "~5.5.4"
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "20.16.13",
+    "eslint": "^9.13.0",
+    "publint": "^0.2.12",
+    "typescript": "~5.6.3"
   },
   "author": {
     "name": "Zoltan Lehoczky",
@@ -41,9 +49,14 @@
   },
   "homepage": "https://github.com/Lehoczky/configs/tree/master/packages/eslint-config-base",
   "repository": {
-    "url": "https://github.com/Lehoczky/configs.git",
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/Lehoczky/configs.git",
+    "directory": "packages/eslint-config-base"
   },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
   "publishConfig": {
     "access": "public"
   }

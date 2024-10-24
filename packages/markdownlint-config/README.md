@@ -2,20 +2,22 @@
 
 [![npm version](https://badge.fury.io/js/@lehoczky%2Fmarkdownlint-config.svg)](https://badge.fury.io/js/@lehoczky%2Fmarkdownlint-config)
 
-Shared [markdownlint](https://github.com/DavidAnson/markdownlint) configuration for projects with [prettier](https://prettier.io/).
+Shared [markdownlint](https://github.com/DavidAnson/markdownlint) configuration, for projects using [prettier](https://prettier.io/).
 
 ## 💿 Installation
 
 ```sh
-pnpm add -D markdownlint-cli2 prettier @lehoczky/markdownlint-config
+pnpm add -D markdownlint-cli2 @lehoczky/markdownlint-config
 ```
 
 ## 💻 Usage
 
-`.markdownlint.cjs`:
+`.markdownlint.mjs`:
 
 ```js
-module.exports = require("@lehoczky/markdownlint-config")
+import { markdownlintConfigLehoczky } from "@lehoczky/markdownlint-config"
+
+export default markdownlintConfigLehoczky
 ```
 
 Example command:
