@@ -61,4 +61,11 @@ export const javascript: Linter.Config[] = [
       },
     },
   },
+  {
+    files: [`**/scripts/**/*.?([cm])js`],
+    name: "lehoczky/javascript/scripts",
+    rules: {
+      "no-console": "off",
+    },
+  },
 ]
