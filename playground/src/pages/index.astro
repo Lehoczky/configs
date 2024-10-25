@@ -1,0 +1,27 @@
+---
+import Card from "../components/Card.astro"
+import Counter from "../components/Counter.vue"
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Playground</title>
+  </head>
+  <body>
+    <Card />
+    <!-- <Counter client:only /> -->
+    <Counter />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    color: white;
+  }
+</style>
