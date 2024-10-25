@@ -1,5 +1,4 @@
 import type { Linter } from "eslint"
-import ts from "typescript-eslint"
 
 import type { ParserOptions } from "../types/parserOptions.js"
 
@@ -9,11 +8,12 @@ export const typescriptTypeChecked = (
   [
     {
       name: "lehoczky/typescript/type-checked-parser-options",
-      ignores: ["**/*.astro"],
+      ignores: ["**/*.astro", "**/*.?([cm])js"],
       languageOptions: { parserOptions },
     },
     {
       name: "lehoczky/typescript/type-checked",
+      ignores: ["**/*.astro", "**/*.?([cm])js"],
       rules: {
         "@typescript-eslint/no-confusing-void-expression": [
           "warn",
@@ -65,10 +65,5 @@ export const typescriptTypeChecked = (
         "unicorn/prefer-includes": "off",
         "@typescript-eslint/prefer-includes": "warn",
       },
-    },
-    {
-      ...ts.configs.disableTypeChecked,
-      files: ["**/*.?([cm])js"],
-      name: "lehoczky/javascript/disable-type-checked",
     },
   ] as Linter.Config[]
