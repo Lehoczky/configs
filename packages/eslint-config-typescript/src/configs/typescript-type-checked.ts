@@ -45,19 +45,6 @@ export const typescriptTypeChecked = (
         "@typescript-eslint/require-await": "warn",
         "no-return-await": "off",
         "@typescript-eslint/return-await": ["warn", "always"],
-        camelcase: "off",
-        "@typescript-eslint/naming-convention": [
-          "warn",
-          {
-            selector: "property",
-            format: ["camelCase"],
-            filter: {
-              // Ignore properties that require quotes
-              regex: "^[{A-Z}|{0-9}]|[- ]|[/]",
-              match: false,
-            },
-          },
-        ],
         "prefer-promise-reject-errors": "off",
         "@typescript-eslint/prefer-promise-reject-errors": "warn",
 
