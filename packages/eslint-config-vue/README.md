@@ -48,6 +48,24 @@ import { configLehoczkyTypescript } from "@lehoczky/eslint-config-typescript"
 export default configLehoczkyVue()
 ```
 
+### Combining with Astro
+
+```js
+import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
+import eslintPluginAstro from "eslint-plugin-astro"
+
+/** @type {import("eslint").Linter.Config[]} */
+export default [
+  ...configLehoczkyVue({
+    parserOptionsForTypeChecking: {
+      projectService: true,
+      tsconfigRootDir: import.meta.dirname,
+    },
+  }),
+  ...eslintPluginAstro.configs["flat/recommended"],
+]
+```
+
 ## 📢 Commands
 
 `package.json`:
