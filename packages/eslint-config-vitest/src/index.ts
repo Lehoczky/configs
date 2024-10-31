@@ -35,7 +35,10 @@ export const configLehoczkyVitest = (
         "vitest/prefer-expect-resolves": "warn",
         "vitest/prefer-hooks-in-order": "warn",
         "vitest/prefer-hooks-on-top": "warn",
-        "vitest/prefer-lowercase-title": "warn",
+        "vitest/prefer-lowercase-title": [
+          "warn",
+          { ignoreTopLevelDescribe: true },
+        ],
         "vitest/prefer-mock-promise-shorthand": "warn",
         "vitest/prefer-to-be": "warn",
         "vitest/prefer-to-contain": "warn",
