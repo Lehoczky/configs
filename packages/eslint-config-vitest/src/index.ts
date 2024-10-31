@@ -27,7 +27,6 @@ export const configLehoczkyVitest = (
       },
       rules: {
         ...vitest.configs.recommended.rules,
-        "vitest/no-alias-methods": "warn",
         "vitest/no-conditional-in-test": "warn",
         "vitest/no-interpolation-in-snapshots": "warn",
         "vitest/prefer-comparison-matcher": "warn",

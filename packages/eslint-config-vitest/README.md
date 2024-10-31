@@ -21,3 +21,20 @@ import { configLehoczkyVitest } from "@lehoczky/eslint-config-vitest"
 /** @type {import("eslint").Linter.Config[]} */
 export default [...configLehoczkyJavascript(), ...configLehoczkyVitest()]
 ```
+
+### Specify test files
+
+This config tries to find test files on its own, but you can specify a glob manually as well:
+
+```js
+import { configLehoczkyVitest } from "@lehoczky/eslint-config-vitest"
+import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
+
+/** @type {import("eslint").Linter.Config[]} */
+export default [
+  ...configLehoczkyJavascript(),
+  ...configLehoczkyVitest({
+    files: ["test/**/*.ts"],
+  }),
+]
+```
