@@ -15,6 +15,7 @@
     "@eslint/config-inspector": "^0.5.5",
     "@lehoczky/eslint-config-base": "workspace:*",
     "@lehoczky/eslint-config-typescript": "workspace:*",
+    "@lehoczky/eslint-config-vitest": "workspace:*",
     "@lehoczky/eslint-config-vue": "workspace:*",
     "@lehoczky/markdownlint-config": "workspace:*",
     "@lehoczky/prettier-config": "workspace:*",
