@@ -37,7 +37,6 @@ export const configLehoczkyVitest = (
         "vitest/prefer-hooks-on-top": "warn",
         "vitest/prefer-lowercase-title": "warn",
         "vitest/prefer-mock-promise-shorthand": "warn",
-        "vitest/prefer-strict-equal": "warn",
         "vitest/prefer-to-be": "warn",
         "vitest/prefer-to-contain": "warn",
         "vitest/prefer-to-have-length": "warn",
