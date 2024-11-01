@@ -2,7 +2,12 @@
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
   "version": "independent",
   "npmClient": "pnpm",
-  "conventionalCommits": false,
-  "message": "chore: release",
+  "command": {
+    "version": {
+      "conventionalCommits": false,
+      "message": "chore: release %s",
+      "ignoreChanges": ["**/*.md"]
+    }
+  },
   "packages": ["packages/*"]
 }

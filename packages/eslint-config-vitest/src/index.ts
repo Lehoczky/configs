@@ -15,11 +15,14 @@ export const configLehoczkyVitest = (
 
   return [
     {
-      files,
-      name: "lehoczky/vitest",
+      name: "lehoczky/vitest/plugin",
       plugins: {
         vitest,
       },
+    },
+    {
+      files,
+      name: "lehoczky/vitest/rules",
       languageOptions: {
         globals: {
           ...vitest.environments.env.globals,
