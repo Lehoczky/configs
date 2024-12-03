@@ -19,8 +19,8 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/node": "^20.17.7",
-    "prettier": "^3.3.3",
+    "@types/node": "^20.17.9",
+    "prettier": "^3.4.1",
     "publint": "^0.2.12",
     "typescript": "~5.6.3"
   },
