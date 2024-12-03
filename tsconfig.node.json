@@ -1,0 +1,9 @@
+{
+  "include": [".markdownlint.mjs", "eslint.config.mjs", "prettier.config.mjs"],
+  "compilerOptions": {
+    "module": "NodeNext",
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true
+  }
+}
