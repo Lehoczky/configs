@@ -42,7 +42,7 @@ See more: [typescript-eslint | Linting with Type Information](https://typescript
 ### Without Type Checking
 
 ```js
-import { configLehoczkyTypescript } from "@lehoczky/eslint-config-typescript"
+import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
 
 /** @type {import("eslint").Linter.Config[]} */
 export default configLehoczkyVue()
