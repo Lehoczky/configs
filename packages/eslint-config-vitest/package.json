@@ -19,7 +19,7 @@
     "dist"
   ],
   "dependencies": {
-    "@vitest/eslint-plugin": "^1.1.25"
+    "@vitest/eslint-plugin": "^1.1.31"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
@@ -31,9 +31,9 @@
     }
   },
   "devDependencies": {
-    "@types/node": "^20.17.14",
-    "eslint": "^9.18.0",
-    "publint": "^0.3.2",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.1",
+    "publint": "^0.3.5",
     "typescript": "~5.7.3"
   },
   "author": {
