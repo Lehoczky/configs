@@ -1,6 +1,6 @@
 {
   "name": "@lehoczky/markdownlint-config",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "scripts": {
     "clean-dist": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\"",
