@@ -25,17 +25,17 @@
   ],
   "dependencies": {
     "@lehoczky/eslint-config-typescript": "workspace:*",
-    "eslint-plugin-vue": "^9.32.0"
+    "eslint-plugin-vue": "^9.33.0"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
     "typescript": ">=5.4"
   },
   "devDependencies": {
-    "@types/node": "^22.13.4",
-    "eslint": "^9.20.1",
-    "publint": "^0.3.5",
-    "typescript": "~5.7.3"
+    "@types/node": "^22.13.9",
+    "eslint": "^9.21.0",
+    "publint": "^0.3.8",
+    "typescript": "~5.8.2"
   },
   "author": {
     "name": "Zoltan Lehoczky",

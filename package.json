@@ -12,22 +12,22 @@
     "lint": "npm run format:check && npm run eslint:check && npm run markdownlint:check"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^1.0.0",
+    "@eslint/config-inspector": "^1.0.2",
     "@lehoczky/eslint-config-base": "workspace:*",
     "@lehoczky/eslint-config-typescript": "workspace:*",
     "@lehoczky/eslint-config-vitest": "workspace:*",
     "@lehoczky/eslint-config-vue": "workspace:*",
     "@lehoczky/markdownlint-config": "workspace:*",
     "@lehoczky/prettier-config": "workspace:*",
-    "@lerna-lite/cli": "^3.12.0",
-    "@lerna-lite/version": "^3.12.0",
-    "@types/node": "^22.13.4",
-    "eslint": "^9.20.1",
+    "@lerna-lite/cli": "^3.12.1",
+    "@lerna-lite/version": "^3.12.2",
+    "@types/node": "^22.13.9",
+    "eslint": "^9.21.0",
     "eslint-plugin-astro": "^1.3.1",
     "markdownlint-cli2": "^0.17.2",
-    "prettier": "^3.5.1",
+    "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "~5.7.3"
+    "typescript": "~5.8.2"
   },
   "packageManager": "pnpm@9.15.5"
 }

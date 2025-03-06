@@ -20,9 +20,9 @@
   ],
   "devDependencies": {
     "@lehoczky/markdownlint-define-config": "^0.1.2",
-    "@types/node": "^22.13.4",
-    "publint": "^0.3.5",
-    "typescript": "~5.7.3"
+    "@types/node": "^22.13.9",
+    "publint": "^0.3.8",
+    "typescript": "~5.8.2"
   },
   "author": {
     "name": "Zoltan Lehoczky",

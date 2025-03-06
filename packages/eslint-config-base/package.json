@@ -23,8 +23,8 @@
     "dist"
   ],
   "dependencies": {
-    "eslint-config-flat-gitignore": "^2.0.0",
-    "eslint-config-prettier": "^10.0.1",
+    "eslint-config-flat-gitignore": "^2.1.0",
+    "eslint-config-prettier": "^10.0.2",
     "eslint-plugin-jsdoc": "^50.6.3",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-promise": "^7.2.1",
@@ -36,10 +36,10 @@
     "eslint": ">=9.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.13.4",
-    "eslint": "^9.20.1",
-    "publint": "^0.3.5",
-    "typescript": "~5.7.3"
+    "@types/node": "^22.13.9",
+    "eslint": "^9.21.0",
+    "publint": "^0.3.8",
+    "typescript": "~5.8.2"
   },
   "author": {
     "name": "Zoltan Lehoczky",
