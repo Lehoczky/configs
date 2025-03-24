@@ -24,16 +24,16 @@
   ],
   "dependencies": {
     "@lehoczky/eslint-config-base": "workspace:*",
-    "typescript-eslint": "^8.26.0"
+    "typescript-eslint": "^8.27.0"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
     "typescript": ">=5.4"
   },
   "devDependencies": {
-    "@types/node": "^22.13.9",
-    "eslint": "^9.21.0",
-    "publint": "^0.3.8",
+    "@types/node": "^22.13.13",
+    "eslint": "^9.23.0",
+    "publint": "^0.3.9",
     "typescript": "~5.8.2"
   },
   "author": {
