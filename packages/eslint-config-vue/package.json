@@ -1,7 +1,7 @@
 {
   "name": "@lehoczky/eslint-config-vue",
   "description": "ESLint Config for Vue3 with TypeScript",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "license": "MIT",
   "scripts": {
     "clean-dist": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\"",
