@@ -24,17 +24,17 @@
   ],
   "dependencies": {
     "@lehoczky/eslint-config-base": "workspace:*",
-    "typescript-eslint": "^8.27.0"
+    "typescript-eslint": "^8.31.0"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
     "typescript": ">=5.4"
   },
   "devDependencies": {
-    "@types/node": "^22.13.13",
-    "eslint": "^9.23.0",
-    "publint": "^0.3.9",
-    "typescript": "~5.8.2"
+    "@types/node": "^22.15.2",
+    "eslint": "^9.25.1",
+    "publint": "^0.3.12",
+    "typescript": "~5.8.3"
   },
   "author": {
     "name": "Zoltan Lehoczky",
