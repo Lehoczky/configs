@@ -20,7 +20,7 @@
   ],
   "devDependencies": {
     "@lehoczky/markdownlint-define-config": "^0.1.2",
-    "@types/node": "^22.15.2",
+    "@types/node": "^22.15.30",
     "publint": "^0.3.12",
     "typescript": "~5.8.3"
   },

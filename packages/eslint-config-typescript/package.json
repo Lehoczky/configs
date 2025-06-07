@@ -24,15 +24,15 @@
   ],
   "dependencies": {
     "@lehoczky/eslint-config-base": "workspace:*",
-    "typescript-eslint": "^8.31.0"
+    "typescript-eslint": "^8.33.1"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
     "typescript": ">=5.4"
   },
   "devDependencies": {
-    "@types/node": "^22.15.2",
-    "eslint": "^9.25.1",
+    "@types/node": "^22.15.30",
+    "eslint": "^9.28.0",
     "publint": "^0.3.12",
     "typescript": "~5.8.3"
   },
