@@ -19,10 +19,10 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/node": "^22.15.30",
-    "prettier": "^3.5.3",
-    "publint": "^0.3.12",
-    "typescript": "~5.8.3"
+    "@types/node": "catalog:",
+    "prettier": "catalog:",
+    "publint": "catalog:",
+    "typescript": "catalog:"
   },
   "author": {
     "name": "Zoltan Lehoczky",

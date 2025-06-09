@@ -5,3 +5,10 @@ packages:
 onlyBuiltDependencies:
   - esbuild
   - sharp
+
+catalog:
+  "@types/node": "^22.15.30"
+  "eslint": "^9.28.0"
+  "prettier": "^3.5.3"
+  "publint": "^0.3.12"
+  "typescript": "~5.8.3"
