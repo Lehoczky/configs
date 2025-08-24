@@ -9,11 +9,11 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/vue": "^5.1.0",
-    "astro": "^5.9.1",
+    "astro": "^5.13.3",
     "typescript": "catalog:",
-    "vue": "^3.5.16"
+    "vue": "^3.5.19"
   },
   "devDependencies": {
-    "vitest": "^3.2.3"
+    "vitest": "^3.2.4"
   }
 }

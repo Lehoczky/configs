@@ -19,7 +19,7 @@
     "dist"
   ],
   "dependencies": {
-    "@vitest/eslint-plugin": "^1.2.1"
+    "@vitest/eslint-plugin": "^1.3.4"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
