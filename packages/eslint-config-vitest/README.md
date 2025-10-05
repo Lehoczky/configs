@@ -17,9 +17,12 @@ pnpm add -D vitest @lehoczky/eslint-config-vitest
 ```js
 import { configLehoczkyJavascript } from "@lehoczky/eslint-config-base"
 import { configLehoczkyVitest } from "@lehoczky/eslint-config-vitest"
+import { defineConfig } from "eslint/config"
 
-/** @type {import("eslint").Linter.Config[]} */
-export default [...configLehoczkyJavascript(), ...configLehoczkyVitest()]
+export default defineConfig([
+  ...configLehoczkyJavascript(),
+  ...configLehoczkyVitest(),
+])
 ```
 
 ### Specify test files
@@ -28,13 +31,13 @@ This config tries to find test files on its own, but you can specify a glob manu
 
 ```js
 import { configLehoczkyVitest } from "@lehoczky/eslint-config-vitest"
+import { defineConfig } from "eslint/config"
 import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
 
-/** @type {import("eslint").Linter.Config[]} */
-export default [
+export default defineConfig([
   ...configLehoczkyJavascript(),
   ...configLehoczkyVitest({
     files: ["test/**/*.ts"],
   }),
-]
+])
 ```

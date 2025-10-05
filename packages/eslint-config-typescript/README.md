@@ -19,7 +19,6 @@ pnpm add -D eslint typescript @lehoczky/eslint-config-typescript
 ```js
 import { configLehoczkyTypescript } from "@lehoczky/eslint-config-typescript"
 
-/** @type {import("eslint").Linter.Config[]} */
 export default configLehoczkyTypescript({
   parserOptionsForTypeChecking: {
     projectService: true,
@@ -35,7 +34,6 @@ See more: [typescript-eslint | Linting with Type Information](https://typescript
 ```js
 import { configLehoczkyTypescript } from "@lehoczky/eslint-config-typescript"
 
-/** @type {import("eslint").Linter.Config[]} */
 export default configLehoczkyTypescript()
 ```
 

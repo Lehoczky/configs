@@ -17,7 +17,6 @@ pnpm add -D eslint @lehoczky/eslint-config-base
 ```js
 import { configLehoczkyJavascript } from "@lehoczky/eslint-config-base"
 
-/** @type {import("eslint").Linter.Config[]} */
 export default configLehoczkyJavascript()
 ```
 

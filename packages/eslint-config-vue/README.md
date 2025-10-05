@@ -28,7 +28,6 @@ pnpm add -D eslint @lehoczky/eslint-config-vue
 ```js
 import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
 
-/** @type {import("eslint").Linter.Config[]} */
 export default configLehoczkyVue({
   parserOptionsForTypeChecking: {
     projectService: true,
@@ -44,7 +43,6 @@ See more: [typescript-eslint | Linting with Type Information](https://typescript
 ```js
 import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
 
-/** @type {import("eslint").Linter.Config[]} */
 export default configLehoczkyVue()
 ```
 
@@ -52,10 +50,10 @@ export default configLehoczkyVue()
 
 ```js
 import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
+import { defineConfig } from "eslint/config"
 import eslintPluginAstro from "eslint-plugin-astro"
 
-/** @type {import("eslint").Linter.Config[]} */
-export default [
+export default defineConfig([
   ...configLehoczkyVue({
     parserOptionsForTypeChecking: {
       projectService: true,
@@ -63,7 +61,7 @@ export default [
     },
   }),
   ...eslintPluginAstro.configs["flat/recommended"],
-]
+])
 ```
 
 ## 📢 Commands
