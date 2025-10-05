@@ -1,9 +1,10 @@
+// @ts-check
 import { configLehoczkyVitest } from "@lehoczky/eslint-config-vitest"
 import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
+import { defineConfig } from "eslint/config"
 import eslintPluginAstro from "eslint-plugin-astro"
 
-/** @type {import("eslint").Linter.Config[]} */
-export default [
+export default defineConfig([
   ...configLehoczkyVue({
     parserOptionsForTypeChecking: {
       projectService: true,
@@ -12,4 +13,4 @@ export default [
   }),
   ...configLehoczkyVitest(),
   ...eslintPluginAstro.configs["flat/recommended"],
-]
+])

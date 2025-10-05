@@ -17,7 +17,7 @@ export const configLehoczkyVitest = (
     {
       name: "lehoczky/vitest/plugin",
       plugins: {
-        // https://github.com/vitest-dev/eslint-plugin-vitest/issues/737
+        // https://github.com/typescript-eslint/typescript-eslint/issues/11543
         vitest: vitest as any,
       },
     },
