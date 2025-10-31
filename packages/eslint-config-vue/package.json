@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "clean-dist": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\"",
-    "build": "npm run clean-dist && tsc",
+    "build": "node --run clean-dist && tsc",
     "publint": "publint"
   },
   "type": "module",
