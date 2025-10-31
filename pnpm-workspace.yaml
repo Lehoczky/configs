@@ -3,7 +3,7 @@ packages:
   - playground
 
 catalog:
-  "@types/node": ^24.9.2
+  '@types/node': ^24.9.2
   eslint: ^9.39.0
   prettier: ^3.6.2
   publint: ^0.3.15
