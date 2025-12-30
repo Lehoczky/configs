@@ -40,12 +40,14 @@ export const vue = (parserOptions: ParserOptions = {}): Linter.Config[] => [
       "vue/no-useless-concat": "warn",
       "vue/prefer-template": "warn",
 
-      // Does not work well, when extending native HTML interfaces
+      // Does not work well when extending native HTML interfaces
       "vue/prop-name-casing": "off",
       // Mostly a legacy pattern
       "vue/multi-word-component-names": "off",
       // Does not work well with `defineEmits`
       "@typescript-eslint/prefer-function-type": "off",
+      // Only useful for the "options API", but we don't use that
+      "vue/no-dupe-keys": "off",
     },
   },
 ]
