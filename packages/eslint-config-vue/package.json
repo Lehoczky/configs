@@ -25,11 +25,11 @@
   ],
   "dependencies": {
     "@lehoczky/eslint-config-typescript": "workspace:*",
-    "eslint-plugin-vue": "^10.8.0",
+    "eslint-plugin-vue": "^10.9.0",
     "vue-eslint-parser": "^10.4.0"
   },
   "peerDependencies": {
-    "eslint": ">=9.0.0",
+    "eslint": ">=10.0.0",
     "typescript": ">=5.8"
   },
   "devDependencies": {
