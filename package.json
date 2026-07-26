@@ -13,22 +13,22 @@
     "version:eslint": "lerna version --scope \"@lehoczky/eslint*\""
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^2.0.0",
+    "@eslint/config-inspector": "^3.1.0",
     "@lehoczky/eslint-config-base": "workspace:*",
     "@lehoczky/eslint-config-typescript": "workspace:*",
     "@lehoczky/eslint-config-vitest": "workspace:*",
     "@lehoczky/eslint-config-vue": "workspace:*",
     "@lehoczky/markdownlint-config": "workspace:*",
     "@lehoczky/prettier-config": "workspace:*",
-    "@lerna-lite/cli": "^5.2.0",
-    "@lerna-lite/version": "^5.2.0",
+    "@lerna-lite/cli": "^5.4.2",
+    "@lerna-lite/version": "^5.4.2",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "eslint-plugin-astro": "^1.7.0",
-    "markdownlint-cli2": "^0.22.1",
+    "eslint-plugin-astro": "^3.0.1",
+    "markdownlint-cli2": "^0.23.1",
     "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
   },
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "pnpm@11.17.0"
 }

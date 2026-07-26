@@ -11,7 +11,7 @@ export const unicorn: Linter.Config[] = [
       "unicorn/catch-error-name": "warn",
       "unicorn/error-message": "warn",
       "unicorn/new-for-builtins": "warn",
-      "unicorn/no-array-for-each": "warn",
+      "unicorn/no-for-each": "warn",
       "unicorn/prefer-single-call": "warn",
       "unicorn/no-array-reduce": ["warn", { allowSimpleOperations: true }],
       "unicorn/no-await-in-promise-methods": "warn",

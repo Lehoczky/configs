@@ -2,16 +2,15 @@ packages:
   - packages/*
   - playground
 
-catalog:
-  '@types/node': ^24.12.2
-  eslint: ^10.2.1
-  prettier: ^3.8.3
-  publint: ^0.3.18
-  typescript: ~5.9.3
+allowBuilds:
+  esbuild: true
 
-onlyBuiltDependencies:
-  - esbuild
-  - sharp
+catalog:
+  '@types/node': ^24.13.3
+  eslint: ^10.8.0
+  prettier: ^3.9.6
+  publint: ^0.3.22
+  typescript: ~6.0.3
 
 publicHoistPattern:
   - "*eslint*"
