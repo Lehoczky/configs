@@ -35,6 +35,10 @@ export const javascript: Linter.Config[] = [
       "no-throw-literal": "warn",
       "no-unneeded-ternary": "warn",
       "no-unreachable-loop": "warn",
+      "no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
       "no-useless-concat": "warn",
       "no-useless-return": "warn",
       "no-var": "warn",
